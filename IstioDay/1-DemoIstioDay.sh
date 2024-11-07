@@ -4,7 +4,7 @@
 
 # 1. Show Sail Operator is Installed
 echo "Sail Operator is Installed"
-kubectl get pods -n sail-operator -w
+kubectl get pods -n sail-operator
 sleep 5
 
 # 2. Create istio-system namespace
