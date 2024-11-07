@@ -45,6 +45,9 @@ sleep 2
 # 6. Check the  app pods
 echo "Wait the app pods to be ready"
 kubectl wait --for=condition=Ready pod -l app=details -n bookinfo --timeout=300s
+kubectl wait --for=condition=Ready pod -l app=ratings -n bookinfo --timeout=300s
+kubectl wait --for=condition=Ready pod -l app=reviews -n bookinfo --timeout=300s
+kubectl wait --for=condition=Ready pod -l app=productpage -n bookinfo --timeout=300s
 kubectl get pods -n bookinfo
 sleep 5
 
